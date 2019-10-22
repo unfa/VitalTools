@@ -31,3 +31,33 @@ Now execute it passing two filenames. The first one is the project you want to f
 The script will make a copy of your original source file (it is never modified) and use `sed` to replace some strings.
 
 Load the newly created project file in Ardour and your Macro automation should be fixed!
+
+## VitalInstaller.sh
+
+### What is this
+
+This script will copy the Vital files to all the right places in your system.
+
+### Example
+
+Place the script in a directory where the VitalInstaller.zip file is located. That file is the Linux build you've downloaded.
+
+```
+$ ls
+VitalInstaller.sh  VitalInstaller.zip
+```
+
+Now simply run the scipr as root:
+
+```
+$ sudo ./VitalInstaller.sh
+```
+
+The script will:
+1. unzip the archive
+1. rsync the plug-in files to /usr/lib/lv2
+1. rsync the binary to /usr/bin
+1. rsync the data fiels to /usr/share
+1. clean up removing the unzipped archive, leaving everything as before
+
+Warning! This script will delete up any extra files in the `/usr/lib/lv2/Vital.lv2` `/usr/lib/lv2/VitalFX.lv2` and `/usr/share/Vital` directories - if you've put some extra fiels there - back them up, or remove the `--delete` parameters fro m the rsync commands beore running the script, or your files will be lost!
