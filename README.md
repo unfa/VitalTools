@@ -38,6 +38,10 @@ Load the newly created project file in Ardour and your Macro automation should b
 
 This script will copy the Vital files to all the right places in your system.
 
+### Dependancies
+
+This script depends on the `unzip` program. Make sure you have it installed before attempting to use it!
+
 ### Example
 
 Place the script in a directory where the VitalInstaller.zip file is located. That file is the Linux build you've downloaded.
@@ -47,7 +51,7 @@ $ ls
 VitalInstaller.sh  VitalInstaller.zip
 ```
 
-Now simply run the scipr as root:
+Now simply run the script as root:
 
 ```
 $ sudo ./VitalInstaller.sh
