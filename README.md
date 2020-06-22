@@ -64,4 +64,4 @@ The script will:
 1. rsync the data fiels to /usr/share
 1. clean up removing the unzipped archive, leaving everything as before
 
-Warning! This script will delete up any extra files in the `/usr/lib/lv2/Vital.lv2` `/usr/lib/lv2/VitalFX.lv2` and `/usr/share/Vital` directories - if you've put some extra fiels there - back them up, or remove the `--delete` parameters fro m the rsync commands beore running the script, or your files will be lost!
+Warning! This script will first delete all existing files in the `/usr/lib/lv2/Vital.lv2`, `/usr/lib/lv2/VitalFX.lv2` and `/usr/share/Vital` directories - if you've put some extra files there - back them up, or remove the `--delete` parameters from the rsync commands before running the script, or your files will be lost!
